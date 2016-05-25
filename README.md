@@ -1,7 +1,7 @@
 # Viewer for Virtual Reality
 
 
-There are two viewers using **three.js**:
+We create two viewers using **three.js** supporting :
 
 1. **vr-fbx-loader** for FBX (Filmbox) that is a proprietary file format (.fbx) developed by Kaydara and owned by Autodesk since 2006.
 2. **vr-360-video** for 360 stereographic videos
@@ -15,6 +15,27 @@ There are two viewers using **three.js**:
 2. npm
 3. npm http-server
 3. ngrok
+
+## Installing dependencies
+
+### Mac
+```
+brew install git
+brew install npm
+sudo npm install http-server -g
+sudo npm install ngrok2
+```
+### Linux
+```
+apt-get install git
+apt-get install npm
+sudo npm install http-server -g
+sudo npm install ngrok
+```
+
+### Windows
+
+**TODO**
 
 
 ## How to Play
@@ -36,13 +57,6 @@ Run
 ```
 npm install http-server -g
 http-server -p 9999
-```
-```
-Starting up http-server, serving ./
-Available on:
-  http://127.0.0.1:9999
-  http://192.168.0.102:9999
-Hit CTRL-C to stop the server
 ```
 
 After it, on 
@@ -89,6 +103,12 @@ http://75064ec0.ngrok.io
 ![Preview](doc/threejs-viewer-fbx.gif)
 
 ![Preview](doc/threejs-viewer-360.gif)
+
+## Documentation
+
+![Preview](doc/article/output.png)
+[paper.pdf](doc/article/output.png)
+
 
 ## References
 
