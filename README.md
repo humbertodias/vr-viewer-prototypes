@@ -107,6 +107,7 @@ http://75064ec0.ngrok.io
 ## Documentation
 
 ![Preview](doc/article/output.png)
+
 [paper.pdf](doc/article/output.png)
 
 
