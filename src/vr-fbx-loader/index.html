@@ -236,7 +236,8 @@ body {
 
                 fbx_path = baseURL + 'models/fbx/xsi_man_skinning.fbx';
                 // fbx_path = "http://cors.io/?u=https://github.com/mrdoob/three.js/blob/master/examples/models/fbx/xsi_man_skinning.fbx?raw=true"
-                fbx_path = prompt('FBX URL', fbx_path);
+                // descomente para perguntar a url dinamicamente
+                // fbx_path = prompt('FBX URL', fbx_path);
                 loader.load( fbx_path, loadCallBack, onProgress, onError );
             
         </script>
