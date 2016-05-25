@@ -35,8 +35,9 @@ sudo npm install ngrok
 
 ### Windows
 
-**TODO**
-
+```
+TODO
+```
 
 ## How to Play
 
