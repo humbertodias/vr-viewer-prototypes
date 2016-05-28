@@ -13,7 +13,7 @@ cordova build android --release
 
 # credenciais
 STORE_ALIAS=android
-STORE_PASS=bhimA123
+STORE_PASS=password
 
 KEY_STORE=android.keystore
 KEY_PASS=$STORE_PASS
