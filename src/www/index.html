@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>VR - JSON 3 D - Loader</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<style>
+
+body {
+    margin:0 px;
+    overflow:hidden;
+}
+
+#container {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+#debug{
+  font-size: small;
+}
+</style>
+
+
+<!--threejs-->
+<script src="three.js"></script>
+
+<!--json loader-->
+<script src="js/loaders/AssimpJSONLoader.js"></script>
+
+<!--stereo-->
+<script src="js/stereo/StereoEffect.js"></script>
+<script src="js/stereo/FirstPersonControls.js"></script>
+<script src="js/stereo/DeviceOrientationControls.js"></script>
+<script src="js/stereo/OrbitControls.js"></script>
+
+<script src="models/model.json"></script>
+
+<script src="js/scene.js"></script>
+<script src="js/index.js"></script>
+
+</head>
+
+<body>
+
+<div id="container"></div>
+<div id='debug' style="position:fixed;bottom:0;left:0;"></div>
+
+<input id="file" onchange="loadFile(event)" style="display:none" type="file" multiple/>
+       
+
+
+<!-- GUIDAT logo -->
+<script src="js/DAT.GUI.js"></script>
+
+<script>
+
+var pinchStep=0.2;
+
+function info(){
+    var msg = 'Convert 3D models to JSON (assimp2json) on http://www.greentoken.de/onlineconv and load+render it here!';
+    alert(msg);
+}
+
+function converter(){
+    window.open('http://www.greentoken.de/onlineconv','_system');
+}
+
+function hasCameraHelper(){
+    return scene.getObjectById(cameraHelper.id) != undefined;
+}
+
+function toggleCameraHelper(){
+    var ch = scene.getObjectById(cameraHelper.id);
+    if(ch)
+        scene.remove(ch);
+    else
+        scene.add(cameraHelper);
+}
+
+function hasAxisHelper(){
+    return scene.getObjectById(axisHelper.id) != undefined;
+}
+
+function toggleAxisHelper(){
+    var ah = scene.getObjectById(axisHelper.id);
+    if(ah)
+        scene.remove(ah);
+    else
+        scene.add(axisHelper);
+}
+
+function createDataGUI(){
+   gui = new DAT.GUI();
+
+   var params = {
+        stereo: stereo,
+        load: function(){ document.getElementById('file').click() },
+        reset: reset,
+        pinchStep: pinchStep,
+        converter: converter,
+        cameraFreeze: controls.freeze,
+        cameraHelper: hasCameraHelper(),
+        axisHelper: hasAxisHelper(),
+        info: info
+    };
+
+    gui.add(params,'load').name('Load JSON');
+    gui.add(params,'reset').name('Reset Scene');
+
+   gui.add(params, 'stereo').name('Stereoscopic View ?').onChange(function(newValue){
+        stereo=newValue;    
+   }
+   );
+   gui.add(params, 'pinchStep').name('Pinch Speed').min(0.1).max(2).step(0.1).onChange(
+    function(newValue){
+       pinchStep = newValue;
+   }
+   );
+
+   gui.add(params, 'cameraFreeze').name('Freezed Camera ?').listen().
+   onChange(function(newValue){
+        controls.freeze=newValue;    
+   }
+   );
+
+   gui.add(params, 'cameraHelper').name('Camera Helper ?').onChange(function(newValue){
+        toggleCameraHelper();
+   }
+   );
+
+   gui.add(params, 'axisHelper').name('Axis Helper ?').onChange(function(newValue){
+        toggleAxisHelper();
+   }
+   );
+
+
+   gui.add(params, 'converter').name('3D Model Converter');
+   gui.add(params, 'info').name('Information');
+}
+</script>
+
+<script src="js/hammer.js"></script>
+<script>
+
+var focalLength = 25.734; // equivalent to FOV=50
+
+var deltaRotX=10;
+
+function createGestureHammer(){
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc = new Hammer(element);
+
+mc.on("tap", function(ev) {
+    gui.toggle();
+});
+
+// create a pinch and rotate recognizer
+// these require 2 pointers
+var pinch = new Hammer.Pinch();
+
+mc.add(pinch);
+
+var out = document.getElementById('out');
+mc.on("pinchin", function(ev) {
+    focalLength -= pinchStep;
+    camera.setLens(focalLength);
+});
+
+mc.on("pinchout", function(ev) {
+    focalLength += pinchStep;
+    camera.setLens(focalLength);
+});
+
+
+}
+</script>
+
+<script>
+window.onload = function(){
+
+    //init scene
+    init();
+    animate();
+
+    fullscreen();
+
+    createDataGUI();
+    createGestureHammer();
+}
+</script>
+
+</body>
+</html>

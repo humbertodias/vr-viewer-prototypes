@@ -1,0 +1,20 @@
+Carregue dinamicamente seus modelos 3D e visualize-os com efeito estereoscópico
+
+
+Carregue dinamicamente seus modelos 3D e visualize-os com efeito estereoscópico.
+Utiliza o acelerômetro e giroscópio para se movimentar e acople o celular em seu óculos de realidade virtual.
+HOW TO USE:
+Primeiro, converta seus modelos e texturas para JSON em http://www.greentoken.de/onlineconv/
+A seguir, carregue-o no aplicativo.
+Por fim, coloque o celular no seu óculos de realidade virtual e aproveite a visualização tridimensional.
+
+# config.xml
+
+<platform name="android">
+    <icon src="www/favicon.png" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+</platform>
+<platform name="ios">
+    <preference name="StatusBarOverlaysWebView" value="true" />
+</platform>
+<preference name="fullscreen" value="true" />

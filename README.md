@@ -1,43 +1,19 @@
 # Viewer for Virtual Reality
 
 
-We create two viewers using **three.js** supporting :
+We create VR viewer using **three.js** supporting **assimp2json** json format.
 
-1. **vr-fbx-loader** for FBX (Filmbox) that is a proprietary file format (.fbx) developed by Kaydara and owned by Autodesk since 2006.
-2. **vr-360-video** for 360 stereographic videos
+## Avaiable
 
-![Preview](doc/fbx-icon.png)
-![Preview](doc/card-board-vr-icon.png)
+[Play Store](https://play.google.com/store/apps/details?id=br.vr.viewer.models)
+
+[YouTube](https://youtu.be/2gPtW7dqXWA)
 
 ## Prerequires
 
 1. Git 2.6+
-2. npm
-3. npm http-server
-3. ngrok
-
-## Installing dependencies
-
-### Mac
-```
-brew install git
-brew install npm
-sudo npm install http-server -g
-sudo npm install ngrok2
-```
-### Linux
-```
-apt-get install git
-apt-get install npm
-sudo npm install http-server -g
-sudo npm install ngrok
-```
-
-### Windows
-
-```
-TODO
-```
+2. Cordova
+3. make
 
 ## How to Play
 
@@ -50,60 +26,26 @@ git clone https://github.com/humbertodias/vr-viewer-prototypes.git
 Inside the folder
 
 ```
-cd vr-viewer-prototypes/src
+cd vr-viewer-prototypes
 ```
 
 Run
 
 ```
-npm install http-server -g
-http-server -p 9999
+./build.sh
 ```
 
-After it, on 
-
-**Desktop** 
+After it, checkout on 
 
 ```
-http://localhost:9999
-```
-
-Enabling public address
-
-```
-ngrok http 9999
-```
-
-```
-grok by @inconshreveable                                       (Ctrl+C to quit)
-                                                                                
-Tunnel Status                 online                                            
-Version                       2.0.25/2.1.1                                      
-Region                        United States (us)                                
-Web Interface                 http://127.0.0.1:4040                             
-Forwarding                    http://75064ec0.ngrok.io -> localhost:9999        
-Forwarding                    https://75064ec0.ngrok.io -> localhost:9999       
-                                                                                
-Connections                   ttl     opn     rt1     rt5     p50     p90       
-                              0       0       0.00    0.00    0.00    0.00
-```
-
-Finally, access on your phone.
-Using the address given above 
-**Forwarding http://75064ec0.ngrok.io -> localhost:9999**
-
-**Mobile**
-
-```
-http://75064ec0.ngrok.io
+src/platforms/**
 ```
 
 
 ## Output
 
-![Preview](doc/threejs-viewer-fbx.gif)
+![Preview](doc/vr-stereo.png)
 
-![Preview](doc/threejs-viewer-360.gif)
 
 ## Documentation
 
@@ -118,10 +60,14 @@ http://75064ec0.ngrok.io
 	
 	[http://threejs.org/](http://threejs.org/)
 
-2. ngrok
+2. hammer.js
 
-	[https://ngrok.com/](https://ngrok.com/)
+	[http://hammerjs.github.io/](http://hammerjs.github.io/)
+	
+3. dat-gui
 
-3. FBX format
+	[https://code.google.com/archive/p/dat-gui](https://code.google.com/archive/p/dat-gui)
+	
+4. Cordova
 
-	[https://en.wikipedia.org/wiki/FBX](https://en.wikipedia.org/wiki/FBX)
+	[https://cordova.apache.org/](https://cordova.apache.org/)
