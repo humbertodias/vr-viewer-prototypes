@@ -5,9 +5,13 @@ We create VR viewer using **three.js** supporting **assimp2json** json format.
 
 ## Available
 
-[Play Store](https://play.google.com/store/apps/details?id=br.vr.viewer.models)
+![Preview](doc/play-store.png)
+![Preview](doc/apple-store.png)
+![Preview](doc/youtube.png)
 
-[YouTube](https://youtu.be/2gPtW7dqXWA)
+* [Play Store](https://play.google.com/store/apps/details?id=br.vr.viewer.models)
+* [Apple Store](https://itunes.apple.com/us/app/vr-viewer-3d-models/id1119068297?ls=1&mt=8)
+* [YouTube](https://youtu.be/jAuvG02FWO8)
 
 ## Prerequires
 
