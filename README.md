@@ -75,3 +75,7 @@ src/platforms/**
 4. Cordova
 
 	[https://cordova.apache.org/](https://cordova.apache.org/)
+	
+5. TexMarker
+
+	[http://www.xm1math.net/texmaker/](http://www.xm1math.net/texmaker/)
