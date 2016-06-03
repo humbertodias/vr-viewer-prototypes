@@ -16,19 +16,17 @@
 \usepackage{xcolor} 
  
 \title{Visualizador de Protótipos com Realidade Virtual}
-%\author{Humberto Dias \\  \href{mailto:hldtux@gmail.com}{hldtux@gmail.com} }
-%\author{Humberto Dias \\ hldtux@gmail.com}
-\author{Humberto Dias}
+%\author{Humberto Lino Dias \\  \href{mailto:hldtux@gmail.com}{hldtux@gmail.com} }
+%\author{Humberto Lino Dias \\ hldtux@gmail.com}
+\author{Humberto Dias
+\\Allan Tori}
 
  
 \begin{document}
 \maketitle
 
-\abstract{O artigo apresenta um trabalho realizado na área de prototipação virtual. É descrito um
-procedimento para a implementação de um protótipo de um torno CNC utilizando um software para
-desenvolvimento em ambientes virtuais. Este procedimento enfoca principalmente o sistema de
-intertravamento (funcionalidade) e modelo geométrico (design físico) do torno. Consequentemente
-este trabalho visa verificar as potencialidades e as limitações desta ferramenta de interação gráfica
+\abstract{O artigo apresenta um trabalho realizado na área de visualização em realidade virtual de produtos ou protótipos. Utilizamos bibliotecas em webgl \cite{github:vr_viewer_prototypes}  e Unity 5 \cite{wiki:unity} para criar dois protótipos desse visualizador. Consequentemente
+este trabalho visa verificar as potencialidades e as limitações dessas ferramenta de interação gráfica
 diante da complexidade dos dados que a prototipação de um produto de manufatura ou montagem
 requer.}
 
@@ -49,7 +47,9 @@ requer.}
 \subsection{INTRODUÇÃO}
 
 \paragraph{}
-Prototipação virtual é um passo importante em direção
+Atualmente as tecnologias em realidade virtual estão sendo amplamente usadas em diversas áreas do conhecimento, 
+como por exemplo no design e engenharia prototipação \cite{wiki:prototipacao}, entretenimento e ciências.
+No design e engenharia, a prototipação virtual é um passo importante em direção
 ao desenvolvimento eficiente do produto final.
 Baseados nas informações de geometria e topologia do
 projeto, nos resultados da simulação obtidos por
@@ -73,31 +73,39 @@ Sistema, uma vez que são eliminados etapas de confecção de protótipos físic
 proporciona-se uma melhoria da qualidade do produto, pois a aplicação de diferentes
 alternativas do projeto pode ser realizada mais rapidamente, permitindo uma melhoria da
 validação das soluções apropriadas que satisfaça os parâmetros especificados para o sistema,
-com um menor custo. Segundo Kinner ( 1996 ):
+com um menor custo. Podemos dizer que realidade virtual (RV) \cite{wiki:virtual_reality} é a forma mais avançada de interface entre o usuário e o computador até agora disponível
+(HANCOCK, 1995). Trata-se de uma interface homem-máquina que simula um ambiente real e
+permite aos participantes interagirem com o mesmo (LATTA \& OBERG, 1994). 
+
 
 \subsection{VISÃO GERAL DO PROJETO PRÁTICO}
 \paragraph{}
-Nesta fase, toda a comunicação era feita apenas pela fala, o que tornava o \hyphenation{co-nhe-ci-men-to} restrito aos grupos que se comunicavam com a mesmo dialeto. Além de ser uma comunicação de meio ruidoso. Ou seja, quanto mais a mensagem trafega, mais ela se distancia da versão original. Característica que não ocorre na galáxia seguinte.
-
-\subsection{PROCEDIMENTO PARA A IMPLEMENTAÇÃO}
+No projeto aqui apresentado, foram feitos dois protótipos de simuladores em realidade virtual. No primeiro foi utilizado a biblioteca ‘‘Three.js’’ \cite{wiki:threejs} e a plataforma é web, portanto foi necessário um importador de objetos Javascript ( JSON ) \cite{wiki:json} para os objetos 3D, também em JSON \cite{wiki:json}. Nesse primeiro protótipo, houve uma dificuldade em se
+criar uma interface, pois seria necessário recriar mecânicas de raycast para conseguir captar para onde o usuário está olhando. No segundo protótipo utilizamos a engine de jogos Unity \cite{wiki.city} 5.0, uma biblioteca de importação de objetos em obj e outra biblioteca para acessar os arquivos do computador ou celular gerando um ‘‘path’’  para a biblioteca de importação. No Unity \cite{wiki:unity}, a mecânica de raycast já é bem implementada
+,portanto não houve dificuldade de se criar uma interface interativa. 
 
 \paragraph{}
-É marcada pelo início da prensa de \textbf{Gutenberg}.
-Com ela a cultura e o conhecimento puderam então, serem passadas adiante de forma direta.
-Para Mcluhan, a imprensa é o livro diário das pessoas e ele atribui à ela o crescimento do nacionalismo. 
-Mesmo não sendo ruidosa, ainda existiam barreiras linguísticas, que foram sobrepostas pela linguagens regionais da imprensa.
 
 \subsection{CONCLUSÕES}
 \paragraph{}
-O avanço significativo da tecnologia permitiu que todo o conhecimento ficasse disponível e com fácil acesso.
-Sendo a comunicação instantânea e a velocidade com que as informações são passadas é incrivelmente alta.
-Uma crítica que Mcluhan\cite{wiki:marshall_mcluhan} faz, é que com o acesso rápido e fácil ao conhecimento, as pessoas não se esforçam tanto para memorizar como antes. \cite{ted:ted_talk_feats_of_memory_anyone_can_do}
-Mcluhan também fala sobre os novos meios de comunicação.
-Segundo ele, as novas mídias situam certas personalidade em um novo plano de existência.
-O que cada uma dessas personalidade faz, se torna ponto de consciência coletiva para uma sociedade inteira.
+Neste projeto percebe-se a grande difereça entre visualizar um protótipo de um software 3d num monitor e o mesmo protótipo visualizado em realidade virtual.
+Segundo Kirner(1996), a grande vantagem desse tipo de interface em RV \cite{wiki:virtual_reality}  é
+que o conhecimento intuitivo do usuário a respeito do mundo físico pode ser transferido para manipular o mundo virtual. O usuário entra no espaço virtual das aplicações e visualiza,
+manipula e explora os dados da aplicação em tempo real, usando seus sentidos, particularmente os movimentos naturais tridimensionais do corpo. Para apoiar esse tipo de interação, o
+usuário utiliza dispositivos não convencionais como capacete de visualização e controle, luvas e outros. Estes dispositivos dão ao usuário a impressão de que a aplicação está funcionando
+no ambiente tridimensional real, permitindo sua exploração a movimentação natural dos objetos com o uso das mãos.
+
+\newpage
+\section{Apêndice}
+
+Por fim, a referência do aplicativo na PlayStore e video sobre este trabalho:
+
+\begin{enumerate}
+\item  \url{https://play.google.com/store/apps/details?id=br.vr.viewer.models} \cite{playstore:app_vr_viewer_prototypes}
+\item  \url{https://youtu.be/jAuvG02FWO8} \cite{youtube:app_vr_viewer_prototypes}
+\end{enumerate}
 
 
- 
 \bibliography{refs}
 \bibliographystyle{plain}
  
