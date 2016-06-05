@@ -23,7 +23,6 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    
     <platform name="android">
         <icon src="www/favicon.png" />
         <preference name="AndroidPersistentFileLocation" value="Compatibility" />
@@ -32,57 +31,49 @@
         <preference name="StatusBarOverlaysWebView" value="true" />
     </platform>
     <preference name="fullscreen" value="true" />
-
     <preference name="orientation" value="landscape" />
-
-    <preference name="xwalkVersion" value="xwalk_core_library_beta:18+" />
+    <platform name="ios">
+        <icon height="29" src="resources/icon-29x29.png" width="29" />
+        <icon height="40" src="resources/icon-40x40.png" width="40" />
+        <icon height="58" src="resources/icon-58x58.png" width="58" />
+        <icon height="76" src="resources/icon-76x76.png" width="76" />
+        <icon height="80" src="resources/icon-80x80.png" width="80" />
+        <icon height="120" src="resources/icon-120x120.png" width="120" />
+        <icon height="152" src="resources/icon-152x152.png" width="152" />
+        <icon height="167" src="resources/icon-167x167.png" width="167" />
+        <icon height="180" src="resources/icon-180x180.png" width="180" />
+        <splash height="480" src="resources/splash-320x480.png" width="320" />
+        <splash height="960" src="resources/splash-640x960.png" width="640" />
+        <splash height="1136" src="resources/splash-640x1136.png" width="640" />
+        <splash height="1334" src="resources/splash-750x1334.png" width="750" />
+        <splash height="2208" src="resources/splash-1242x2208.png" width="1242" />
+        <splash height="1242" src="resources/splash-2208x1242.png" width="2208" />
+        <splash height="768" src="resources/splash-768x768.png" width="768" />
+        <splash height="1004" src="resources/splash-768x1004.png" width="768" />
+        <splash height="1024" src="resources/splash-768x1024.png" width="768" />
+        <splash height="2048" src="resources/splash-1536x2048.png" width="1536" />
+        <splash height="2008" src="resources/splash-1556x2008.png" width="1556" />
+        <splash height="768" src="resources/splash-1024x768.png" width="1024" />
+        <splash height="1496" src="resources/splash-2048x1496.png" width="2048" />
+        <splash height="1536" src="resources/splash-2048x1536.png" width="2048" />
+    </platform>
+    <platform name="android">
+        <icon height="48" src="resources/icon-48x48.png" width="48" />
+        <icon height="72" src="resources/icon-72x72.png" width="72" />
+        <icon height="96" src="resources/icon-96x96.png" width="96" />
+        <icon height="144" src="resources/icon-144x144.png" width="144" />
+        <icon height="192" src="resources/icon-192x192.png" width="192" />
+        <splash density="port-mdpi" height="470" src="resources/splash-320x470.png" width="320" />
+        <splash density="land-mdpi" height="320" src="resources/splash-470x320.png" width="470" />
+        <splash density="port-hdpi" height="640" src="resources/splash-480x640.png" width="480" />
+        <splash density="land-hdpi" height="480" src="resources/splash-640x480.png" width="640" />
+        <splash density="port-xhdpi" height="960" src="resources/splash-720x960.png" width="720" />
+        <splash density="land-xhdpi" height="720" src="resources/splash-960x720.png" width="960" />
+        <splash height="1440" src="resources/splash-1080x1440.png" width="1080" />
+        <splash height="1080" src="resources/splash-1440x1080.png" width="1440" />
+    </platform>
+    <preference name="xwalkVersion" value="18+" />
     <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
     <preference name="xwalkMode" value="embedded" />
     <preference name="xwalkMultipleApk" value="true" />
-
-
-<platform name="ios">
-    <icon src="resources/icon-29x29.png" width="29" height="29"/>
-    <icon src="resources/icon-40x40.png" width="40" height="40"/>
-    <icon src="resources/icon-58x58.png" width="58" height="58"/>
-    <icon src="resources/icon-76x76.png" width="76" height="76"/>
-    <icon src="resources/icon-80x80.png" width="80" height="80"/>
-    <icon src="resources/icon-120x120.png" width="120" height="120"/>
-    <icon src="resources/icon-152x152.png" width="152" height="152"/>
-    <icon src="resources/icon-167x167.png" width="167" height="167"/>
-    <icon src="resources/icon-180x180.png" width="180" height="180"/>
-    
-    <splash src="resources/splash-320x480.png" width="320" height="480"/>
-    <splash src="resources/splash-640x960.png" width="640" height="960"/>
-    <splash src="resources/splash-640x1136.png" width="640" height="1136"/>
-    <splash src="resources/splash-750x1334.png" width="750" height="1334"/>
-    <splash src="resources/splash-1242x2208.png" width="1242" height="2208"/>
-    <splash src="resources/splash-2208x1242.png" width="2208" height="1242"/>
-
-    <splash src="resources/splash-768x768.png" width="768" height="768"/>
-    <splash src="resources/splash-768x1004.png" width="768" height="1004"/>
-    <splash src="resources/splash-768x1024.png" width="768" height="1024"/>
-    <splash src="resources/splash-1536x2048.png" width="1536" height="2048"/>
-    <splash src="resources/splash-1556x2008.png" width="1556" height="2008"/>
-    <splash src="resources/splash-1024x768.png" width="1024" height="768"/>
-    <splash src="resources/splash-2048x1496.png" width="2048" height="1496"/>
-    <splash src="resources/splash-2048x1536.png" width="2048" height="1536"/>
-  </platform>
-  <platform name="android">
-    <icon src="resources/icon-48x48.png" width="48" height="48"/>
-    <icon src="resources/icon-72x72.png" width="72" height="72"/>
-    <icon src="resources/icon-96x96.png" width="96" height="96"/>
-    <icon src="resources/icon-144x144.png" width="144" height="144"/>
-    <icon src="resources/icon-192x192.png" width="192" height="192"/>
-
-    <splash src="resources/splash-320x470.png" width="320" height="470" density="port-mdpi"/>
-    <splash src="resources/splash-470x320.png" width="470" height="320" density="land-mdpi"/>
-    <splash src="resources/splash-480x640.png" width="480" height="640" density="port-hdpi"/>
-    <splash src="resources/splash-640x480.png" width="640" height="480" density="land-hdpi"/>
-    <splash src="resources/splash-720x960.png" width="720" height="960" density="port-xhdpi"/>
-    <splash src="resources/splash-960x720.png" width="960" height="720" density="land-xhdpi"/>
-    <splash src="resources/splash-1080x1440.png" width="1080" height="1440"/>
-    <splash src="resources/splash-1440x1080.png" width="1440" height="1080"/>
-  </platform>
-
 </widget>
