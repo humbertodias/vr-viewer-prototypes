@@ -36,7 +36,7 @@ body {
 <script src="js/stereo/DeviceOrientationControls.js"></script>
 <script src="js/stereo/OrbitControls.js"></script>
 
-<script src="models/model.json"></script>
+<script src="models/demo.json"></script>
 
 <script src="js/scene.js"></script>
 <script src="js/index.js"></script>
@@ -97,8 +97,9 @@ function createDataGUI(){
 
    var params = {
         stereo: stereo,
-        load: function(){ document.getElementById('file').click() },
+        load: load,
         reset: reset,
+        demo: demo,
         pinchStep: pinchStep,
         converter: converter,
         cameraFreeze: controls.freeze,
@@ -109,6 +110,7 @@ function createDataGUI(){
 
     gui.add(params,'load').name('Load JSON');
     gui.add(params,'reset').name('Reset Scene');
+    gui.add(params,'demo').name('Demo');
 
    gui.add(params, 'stereo').name('Stereoscopic View ?').onChange(function(newValue){
         stereo=newValue;    

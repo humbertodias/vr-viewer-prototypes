@@ -37,6 +37,13 @@ var	loader = new THREE.AssimpJSONLoader();
 function reset() {
     window.location.reload();
 }
+function load(){ 
+	document.getElementById('file').click();
+}
+
+function demo(){
+	scene.add( loader.parse( json_model ) );
+}
     
 //
 function init()

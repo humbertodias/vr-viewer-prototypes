@@ -1,5 +1,12 @@
 var files = [];
 
+console.error = window.alert;
+
+window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
+    alert("Error occured: " + errorMsg);//or any message
+    return false;
+}
+
 function fixTextures(jsonObj, nonJsonFiles){
     var fixed = 0;
 
