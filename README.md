@@ -33,11 +33,20 @@ Inside the folder
 cd vr-viewer-prototypes
 ```
 
-Run
+Build
 
 ```
-./build.sh
+make android
 ```
+
+platforms/android/build/outputs/apk/**android-armv7-release-signed.apk**
+
+
+```
+make ios
+```
+
+platforms/ios/build/**signed.ipa**
 
 After it, checkout on 
 
