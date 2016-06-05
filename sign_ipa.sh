@@ -1,27 +1,21 @@
 #!/bin/bash
 
 IPA_UNSIGNED="platforms/ios/build/device/VR Viewer 3D Models.ipa"
-IPA_SIGNED="platforms/ios/signed.ipa"
+IPA_SIGNED="platforms/ios/build/signed.ipa"
 APP="platforms/ios/build/device/VR Viewer 3D Models.app"
 
 # https://developer.apple.com > Provision Profiles > Distribution > FILL > Generate
 PROVISION="compolygon4gamesviewermodels.mobileprovision"
-#CERTIFICATE="Name of certificate: To sign with" # must be in keychain
-# CERTIFICATE="iOS Distribution: Humberto Dias"
-# CERTIFICATE="Developer ID Application: Humberto Dias (SYN3LPZ35L)"
-# CERTIFICATE="Developer ID Certification Authority"
-# CERTIFICATE="iPhone Distribution: Humberto Dias (SYN3LPZ35L)"
-
 CERTIFICATE="iPhone Developer: Humberto Dias (UGSNK4VCD7)"
 
 # pasta de fontes
 cd src/
 
-# clean
-cordova clean ios
-
 # add android
 cordova platform add ios
+
+# clean
+cordova clean ios
 
 # generating ipa file
 cordova build ios --device
@@ -51,4 +45,5 @@ zip -qr "$IPA_SIGNED" Payload
 echo "Verifying ipa"
 codesign -d -vvvv "$APP"
 
+echo "Signed app on: Payload/"
 echo "Signed ipa file: $IPA_SIGNED"

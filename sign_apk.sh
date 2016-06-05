@@ -16,6 +16,9 @@ cd src/
 # add android
 cordova platform add android
 
+# clean
+cordova clean android
+
 # para threejs com webgl
 cordova plugin add cordova-plugin-crosswalk-webview
 
@@ -24,7 +27,6 @@ cordova platform add android
 
 # para gerar a versão release
 cordova build android --release
-
 
 # remove anterior
 rm $KEY_STORE
@@ -65,4 +67,4 @@ zipalign -v 4 \
 $APK_UNSIGNED \
 $APK_SIGNED
 
-echo "SIGNED FILE: android-armv7-release-signed.apk"
+echo "SIGNED FILE: $APK_SIGNED"
