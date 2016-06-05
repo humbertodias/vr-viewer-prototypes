@@ -2,16 +2,16 @@ mkdir:
 	mkdir -pv out && cd out && mkdir -pv apple/3.5-Inch apple/4-Inch apple/4.7-Inch apple/5.5-Inch apple/iPad apple/iPad\ Pro android windows
 
 apple_icon: mkdir
-	convert in/icon.png -resize 29x29\! -alpha remove -alpha off out/apple/icon-29x29.png
-	convert in/icon.png -resize 40x40\! -alpha remove -alpha off out/apple/icon-40x40.png
-	convert in/icon.png -resize 58x58\! -alpha remove -alpha off out/apple/icon-58x58.png
-	convert in/icon.png -resize 76x76\! -alpha remove -alpha off out/apple/icon-76x76.png
-	convert in/icon.png -resize 80x80\! -alpha remove -alpha off out/apple/icon-80x80.png
-	convert in/icon.png -resize 120x120\! -alpha remove -alpha off out/apple/icon-120x120.png
-	convert in/icon.png -resize 152x152\! -alpha remove -alpha off out/apple/icon-152x152.png
-	convert in/icon.png -resize 167x167\! -alpha remove -alpha off out/apple/icon-167x167.png
-	convert in/icon.png -resize 180x180\! -alpha remove -alpha off out/apple/icon-180x180.png
-	convert in/icon.png -resize 1024x1024\! -alpha remove -alpha off out/apple/icon-1024x1024.png
+	convert in/icon-apple.png -resize 29x29\! -alpha remove -alpha off out/apple/icon-29x29.png
+	convert in/icon-apple.png -resize 40x40\! -alpha remove -alpha off out/apple/icon-40x40.png
+	convert in/icon-apple.png -resize 58x58\! -alpha remove -alpha off out/apple/icon-58x58.png
+	convert in/icon-apple.png -resize 76x76\! -alpha remove -alpha off out/apple/icon-76x76.png
+	convert in/icon-apple.png -resize 80x80\! -alpha remove -alpha off out/apple/icon-80x80.png
+	convert in/icon-apple.png -resize 120x120\! -alpha remove -alpha off out/apple/icon-120x120.png
+	convert in/icon-apple.png -resize 152x152\! -alpha remove -alpha off out/apple/icon-152x152.png
+	convert in/icon-apple.png -resize 167x167\! -alpha remove -alpha off out/apple/icon-167x167.png
+	convert in/icon-apple.png -resize 180x180\! -alpha remove -alpha off out/apple/icon-180x180.png
+	convert in/icon-apple.png -resize 1024x1024\! -alpha remove -alpha off out/apple/icon-1024x1024.png
 
 apple_splash: mkdir
 	convert in/splash.png -resize 320x480\! -alpha on out/apple/splash-320x480.png
