@@ -9,6 +9,8 @@ KEY_PASS=$STORE_PASS
 
 APK_UNSIGNED=platforms/android/build/outputs/apk/android-armv7-release-unsigned.apk
 APK_SIGNED=platforms/android/build/outputs/apk/android-armv7-release-signed.apk
+DNAME="CN=Polygon, OU=Application Development, O=br.vr.viewer.models, L=Sao_Paulo, S=Sao_Paulo, C=BR"
+# DNAME="CN=BR"
 
 # pasta de fontes
 cd src/
@@ -39,7 +41,7 @@ keytool -v \
 -keyalg RSA \
 -keysize 2048 \
 -validity 10000 \
--dname "CN=Polygon, OU=Application Development, O=br.vr.viewer.models, L=Sao_Paulo, S=Sao_Paulo, C=BR"<<EOF
+-dname "$DNAME"<<EOF
 $STORE_PASS
 $STORE_PASS
 $STORE_PASS
@@ -68,3 +70,6 @@ $APK_UNSIGNED \
 $APK_SIGNED
 
 echo "SIGNED FILE: $APK_SIGNED"
+
+# Hash com a assinatura
+keytool -printcert -jarfile "$APK_SIGNED"

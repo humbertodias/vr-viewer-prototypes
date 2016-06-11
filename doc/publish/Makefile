@@ -2,31 +2,53 @@ mkdir:
 	mkdir -pv out && cd out && mkdir -pv apple/3.5-Inch apple/4-Inch apple/4.7-Inch apple/5.5-Inch apple/iPad apple/iPad\ Pro android windows
 
 apple_icon: mkdir
-	convert in/icon-apple.png -resize 29x29\! -alpha remove -alpha off out/apple/icon-29x29.png
-	convert in/icon-apple.png -resize 40x40\! -alpha remove -alpha off out/apple/icon-40x40.png
-	convert in/icon-apple.png -resize 58x58\! -alpha remove -alpha off out/apple/icon-58x58.png
-	convert in/icon-apple.png -resize 76x76\! -alpha remove -alpha off out/apple/icon-76x76.png
-	convert in/icon-apple.png -resize 80x80\! -alpha remove -alpha off out/apple/icon-80x80.png
-	convert in/icon-apple.png -resize 120x120\! -alpha remove -alpha off out/apple/icon-120x120.png
-	convert in/icon-apple.png -resize 152x152\! -alpha remove -alpha off out/apple/icon-152x152.png
-	convert in/icon-apple.png -resize 167x167\! -alpha remove -alpha off out/apple/icon-167x167.png
-	convert in/icon-apple.png -resize 180x180\! -alpha remove -alpha off out/apple/icon-180x180.png
-	convert in/icon-apple.png -resize 1024x1024\! -alpha remove -alpha off out/apple/icon-1024x1024.png
+	convert in/icon.png -resize 29x29\! -alpha remove -alpha off out/apple/icon-29x29.png
+	convert in/icon.png -resize 40x40\! -alpha remove -alpha off out/apple/icon-40x40.png
+	convert in/icon.png -resize 50x50\! -alpha remove -alpha off out/apple/icon-50x50.png
+	convert in/icon.png -resize 57x57\! -alpha remove -alpha off out/apple/icon-57x57.png
+	convert in/icon.png -resize 58x58\! -alpha remove -alpha off out/apple/icon-58x58.png
+	convert in/icon.png -resize 72x72\! -alpha remove -alpha off out/apple/icon-72x72.png
+	convert in/icon.png -resize 76x76\! -alpha remove -alpha off out/apple/icon-76x76.png
+	convert in/icon.png -resize 80x80\! -alpha remove -alpha off out/apple/icon-80x80.png
+	convert in/icon.png -resize 87x87\! -alpha remove -alpha off out/apple/icon-87x87.png
+	convert in/icon.png -resize 100x100\! -alpha remove -alpha off out/apple/icon-100x100.png
+	convert in/icon.png -resize 114x114\! -alpha remove -alpha off out/apple/icon-114x114.png
+	convert in/icon.png -resize 120x120\! -alpha remove -alpha off out/apple/icon-120x120.png
+	convert in/icon.png -resize 144x144\! -alpha remove -alpha off out/apple/icon-144x144.png
+	convert in/icon.png -resize 152x152\! -alpha remove -alpha off out/apple/icon-152x152.png
+	convert in/icon.png -resize 167x167\! -alpha remove -alpha off out/apple/icon-167x167.png
+	convert in/icon.png -resize 180x180\! -alpha remove -alpha off out/apple/icon-180x180.png
+	convert in/icon.png -resize 1024x1024\! -alpha remove -alpha off out/apple/icon-1024x1024.png
 
 apple_splash: mkdir
-	convert in/splash.png -resize 320x480\! -alpha on out/apple/splash-320x480.png
-	convert in/splash.png -resize 640x960\! -alpha on out/apple/splash-640x960.png
-	convert in/splash.png -resize 640x1136\! -alpha on out/apple/splash-640x1136.png
-	convert in/splash.png -resize 750x1334\! -alpha on out/apple/splash-750x1334.png
-	convert in/splash.png -resize 768x1004\! -alpha on out/apple/splash-768x1004.png
-	convert in/splash.png -resize 768x1024\! -alpha on out/apple/splash-768x1024.png
-	convert in/splash.png -resize 1024x768\! -alpha on out/apple/splash-1024x768.png
-	convert in/splash.png -resize 1242x2208\! -alpha on out/apple/splash-1242x2208.png
-	convert in/splash.png -resize 1556x2008\! -alpha on out/apple/splash-1556x2008.png
-	convert in/splash.png -resize 1536x2048\! -alpha on out/apple/splash-1536x2048.png
-	convert in/splash.png -resize 2048x1496\! -alpha on out/apple/splash-2048x1496.png
-	convert in/splash.png -resize 2048x1536\! -alpha on out/apple/splash-2048x1536.png
-	convert in/splash.png -resize 2208x1242\! -alpha on out/apple/splash-2208x1242.png
+	convert in/splash.png -gravity Center -crop 320x568+0+0\! -alpha on out/apple/splash-320x568.png
+	convert in/splash.png -gravity Center -crop 320x480+0+0\! -alpha on out/apple/splash-320x480.png
+	convert in/splash.png -gravity Center -crop 640x960+0+0\! -alpha on out/apple/splash-640x960.png
+	convert in/splash.png -gravity Center -crop 640x1136+0+0\! -alpha on out/apple/splash-640x1136.png
+	convert in/splash.png -gravity Center -crop 750x1334+0+0\! -alpha on out/apple/splash-750x1334.png
+	convert in/splash.png -gravity Center -crop 768x1004+0+0\! -alpha on out/apple/splash-768x1004.png
+	convert in/splash.png -gravity Center -crop 768x1024+0+0\! -alpha on out/apple/splash-768x1024.png
+	convert in/splash.png -gravity Center -crop 786x1024+0+0\! -alpha on out/apple/splash-786x1024.png
+
+	convert in/splash.png -gravity Center -crop 1024x748+0+0\! -alpha on out/apple/splash-1024x748.png
+
+	convert in/splash.png -gravity Center -crop 1024x768+0+0\! -alpha on out/apple/splash-1024x768.png
+	convert in/splash.png -gravity Center -crop 1242x2208+0+0\! -alpha on out/apple/splash-1242x2208.png
+	convert in/splash.png -gravity Center -crop 1536x2048+0+0\! -alpha on out/apple/splash-1536x2048.png
+	convert in/splash.png -gravity Center -crop 1536x2008+0+0\! -alpha on out/apple/splash-1536x2008.png
+	convert in/splash.png -gravity Center -crop 1556x2008+0+0\! -alpha on out/apple/splash-1556x2008.png
+	convert in/splash.png -gravity Center -crop 2048x1496+0+0\! -alpha on out/apple/splash-2048x1496.png
+	convert in/splash.png -gravity Center -crop 2048x1536+0+0\! -alpha on out/apple/splash-2048x1536.png
+	convert in/splash.png -gravity Center -crop 2208x1242+0+0\! -alpha on out/apple/splash-2208x1242.png
+
+	
+
+# For iPhone Portrait iOS 7: 2x - 640 x 960, R4 - 640 x 1136
+# For iPad Portrait iOS 7: 1x - 768 x 1024, 2x - 1536 x 2048
+# For iPad Landscape iOS 7: 1x - 1024 x 768, 2x 2048 x 1536
+
+# For iPad Portrait Without Status Bar iOS 5,6: 1x - 786 x 1024, 2x - 1536 x 2008
+# For iPad Landscape Without Status Bar iOS 5,6: 1x - 1024 x 768, 2x - 2048 x 1496
 
 apple_3.5: mkdir
 	convert in/01.png -resize 960x640^ -extent 960x640 -gravity center -alpha remove -alpha off out/apple/3.5-Inch/01-960x640.png
